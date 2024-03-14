@@ -166,10 +166,6 @@ def get_language_code(language_name):
     # You need to define language_map somewhere in your code
     return language_map.get(language_name)
 
-def translate_text(text , target_language='en'):
-    translator = Translator()
-    translated_text = translator.translate(text, dest=target_language).text
-    return translated_text
 
 def download_audio(youtube_url, output_path, filename="audio"):
     yt = YouTube(youtube_url)
