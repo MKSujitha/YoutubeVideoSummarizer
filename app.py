@@ -71,7 +71,7 @@ async def submit_url(request: Request, url: str = Form(...), language: str = For
     
     def remove_special_characters(text):
         # Define the pattern to match any character that is not a letter, number, space, period, comma, exclamation mark, or question mark
-        pattern = r'[^a-zA-Z0-9.,!? ]'
+        pattern = r'[^a-zA-Z0-9.,!?\- ]'
         
         # Replace all matches of the pattern with an empty string
         cleaned_text = re.sub(pattern, '', text)
